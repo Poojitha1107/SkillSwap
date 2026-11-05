@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Original frontend backup (HTML/CSS/JS)
+/frontend/
+
+# Build files
+**/dist/
+
+# System files
+.DS_Store
+npm-debug.log*

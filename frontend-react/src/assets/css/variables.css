@@ -1,0 +1,87 @@
+
+/* ==========================================================================
+   SkillSwap - Professional SaaS Design System
+   ========================================================================== */
+
+:root {
+  /* Backgrounds */
+  --bg-canvas: #B9A6E5;
+  --bg-canvas-subtle: #C8B9EA;
+  --bg-surface: #FAFAF8;
+  --bg-surface-white: #FFFFFF;
+  --bg-surface-elevated: #F5F5F2;
+  --bg-surface-hover: #EEEEEA;
+
+  /* Sidebar */
+  --sidebar-bg: #201F35;
+  --sidebar-bg-hover: #302F48;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-text: #F1F0F7;
+  --sidebar-text-muted: #A5A3B8;
+
+  /* Primary Accent */
+  --accent-lime: #D5EB82;
+  --accent-lime-hover: #C5DD6D;
+  --accent-lime-subtle: #F1F7DB;
+  --accent-lime-text: #252B16;
+
+  /* Secondary Accent */
+  --accent-purple: #7962C7;
+  --accent-purple-hover: #6851B5;
+  --accent-purple-subtle: #F0ECFA;
+  --accent-purple-light: #F6F3FC;
+
+  /* Status Colors */
+  --status-emerald: #159B72;
+  --status-emerald-subtle: #E8F6F0;
+  --status-emerald-text: #126447;
+
+  --status-amber: #D99A32;
+  --status-amber-subtle: #FFF5DF;
+  --status-amber-text: #805716;
+
+  --status-rose: #D85D65;
+  --status-rose-subtle: #FCEDEF;
+  --status-rose-text: #963E48;
+
+  --status-sky: #3995C5;
+  --status-sky-subtle: #EAF5FB;
+  --status-sky-text: #236B91;
+
+  /* Typography */
+  --text-primary: #25243A;
+  --text-secondary: #69697B;
+  --text-muted: #9291A1;
+  --text-inverse: #FFFFFF;
+
+  /* Borders */
+  --border-color: #E9E8ED;
+  --border-color-strong: #D8D6E0;
+  --border-focus: #7962C7;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(32, 31, 53, 0.035);
+  --shadow-md: 0 5px 16px rgba(32, 31, 53, 0.055);
+  --shadow-lg: 0 12px 28px rgba(32, 31, 53, 0.075);
+  --shadow-xl: 0 20px 42px rgba(32, 31, 53, 0.10);
+  --shadow-app-shell: 0 18px 50px rgba(32, 31, 53, 0.13);
+  --shadow-lime-glow: 0 5px 16px rgba(197, 221, 109, 0.25);
+  --shadow-purple-glow: 0 5px 16px rgba(121, 98, 199, 0.18);
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 220ms ease;
+  --transition-smooth: 300ms ease;
+
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', 'Inter', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}

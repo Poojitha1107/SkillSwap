@@ -1,0 +1,90 @@
+@import './assets/css/variables.css';
+@import './assets/css/global.css';
+@import './assets/css/components.css';
+@import './assets/css/landing.css';
+@import './assets/css/dashboard.css';
+
+/* React App Extra UI Helpers & Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Ensure modal overlays render properly with React conditional rendering */
+.modal-overlay.active {
+  display: flex !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Toast container positioning */
+.toast-container {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 420px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.15rem;
+  border-radius: var(--radius-lg, 14px);
+  background: var(--bg-surface-white, #FFFFFF);
+  color: var(--text-primary, #25243A);
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(32, 31, 53, 0.15);
+  border: 1px solid var(--border-color, #E9E8ED);
+  transition: all 0.25s ease;
+  min-width: 280px;
+}
+
+.toast-success {
+  border-left: 4px solid var(--status-emerald, #159B72);
+}
+
+.toast-error {
+  border-left: 4px solid var(--status-rose, #D85D65);
+}
+
+.toast-info {
+  border-left: 4px solid var(--accent-purple, #7962C7);
+}
+
+/* Ensure buttons with icons align neatly */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* App page full height handling */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
