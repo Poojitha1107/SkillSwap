@@ -1,7 +1,8 @@
 /**
- * SkillSwap - Centralized REST API Client for React
- * Handles credentials (cookies) and standardized error handling.
+ * SkillSwap - Centralized REST API Client
  */
+
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export const API = {
   async request(endpoint, options = {}) {
@@ -10,7 +11,7 @@ export const API = {
     };
 
     const config = {
-      credentials: 'include', // Ensure session cookies are sent
+      credentials: 'include',
       ...options,
       headers: {
         ...defaultHeaders,
@@ -19,16 +20,19 @@ export const API = {
     };
 
     try {
-      const response = await fetch(endpoint, config);
+      const response = await fetch(`${API_BASE_URL}${endpoint}`, config);
       const data = await response.json().catch(() => ({}));
 
       if (!response.ok) {
-        // If user is banned, trigger ban event and notification
         if (response.status === 403 && data.isBanned) {
-          window.dispatchEvent(new CustomEvent('skillswap:banned', { detail: data }));
+          window.dispatchEvent(
+            new CustomEvent('skillswap:banned', { detail: data })
+          );
         }
 
-        const error = new Error(data.message || `Request failed with status ${response.status}`);
+        const error = new Error(
+          data.message || `Request failed with status ${response.status}`
+        );
         error.status = response.status;
         error.data = data;
         throw error;
@@ -65,4 +69,3 @@ export const API = {
 };
 
 export default API;
-
